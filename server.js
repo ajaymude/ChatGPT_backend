@@ -3,7 +3,7 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 import { Configuration, OpenAIApi } from "openai";
 
-const  port = 'https://chatgpt-mern.onrender.com'
+const  port = 4000 
 
 
 dotenv.config();
@@ -43,8 +43,9 @@ app.post("/", async (req, res) => {
     } catch (error) {
         console.log("FAILED:", req.body.input);
         console.error(error);
-        res.status(500).send(error);
+        res.status(500).send(error); 
     }
 });
+console.log('ff', port )
 
-app.listen(8000, () => console.log("Server is running on port 8000"));
+app.listen(port, () => console.log("Server is running on port 8000" , ));
