@@ -3,7 +3,7 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 import { Configuration, OpenAIApi } from "openai";
 
-const  port = process.env.PORT ||
+const  port = 'https://chatgpt-mern.onrender.com'
 
 
 dotenv.config();
