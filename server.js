@@ -8,7 +8,7 @@ import { Configuration, OpenAIApi } from "openai";
 
 dotenv.config();
 
-const  port =   process.env.PORT || 8000
+
 
 const app = express();
 app.use(cors());
@@ -48,6 +48,6 @@ app.post("/", async (req, res) => {
         res.status(500).send(error); 
     }
 });
-console.log('ff', port )
 
-app.listen(port, () => console.log("Server is running on port 8000" , ));
+
+app.listen(8000, () => console.log("Server is running on port 8000"  ));
